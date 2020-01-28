@@ -71,6 +71,33 @@ void questaoQuatro()
 }
 void questaoCinco()
 {
+	int posicao = 1;
+	int primeiroNumero = 1;
+	int segundoNumero = 4;
+	int quantidade;
+	cout << "Digite a quantidade: ";
+	cin >> quantidade;
+	for (int i = 0; i < quantidade; i++)
+	{
+		if (posicao == 1)
+		{
+			cout << primeiroNumero++ << "  ";
+			posicao++;
+		}
+		else if (posicao == 2)
+		{
+			cout << segundoNumero << "  ";
+			posicao++;
+		}
+		else
+		{
+			cout << segundoNumero++ << "  ";
+			posicao = 1;
+		}
+	}
+}
+void questaoSeis()
+{
 	int quantidade = 0;
 	cout << "Digite a quantidade: ";
 	cin >> quantidade;
@@ -96,7 +123,7 @@ void questaoCinco()
 		}
 	}
 }
-void questaoSeis()
+void questaoSete()
 {
 	char notas[] = { 'A', 'B', 'C', 'D', 'E' };
 	float maiorPessimo = 0;
@@ -176,6 +203,8 @@ int main()
 	case 6:
 		questaoSeis();
 		break;
+	case 7:
+		questaoSete();
 	default:
 		break;
 	}
