@@ -6,11 +6,12 @@ class Vetor
 private:
 	int arr[100000];
 	int length = 0;
-	void BubbleSort();
-	void MergeSort();
-	void SelectionSort();
+	void BubbleSort(int arr[], int length);
+	void InsertionSort(int arr[], int length);
+	void SelectionSort(int arr[], int length);
 	void QuickSort();
-	void InsertionSort();
+	void MergeSort();
+	void printArray(int arr[], int length)
 public:
 	Vetor();
 	bool Add(int element);

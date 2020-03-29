@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Vetor.h"
+#include "Enums.h"
 
 int main()
 {
@@ -27,6 +28,18 @@ int main()
     cout << vetor.Size() << endl; 
     
     vetor.Add(5);
+
+    vetor.Add(2);
+
+    vetor.Add(3);
+
+    vetor.Add(6);
+
+    vetor.Sort(bubble);
+
+    vetor.Sort(insertion);
+
+    vetor.Sort(selection);
 
     cout << vetor.IndexOf(5) << endl;
     

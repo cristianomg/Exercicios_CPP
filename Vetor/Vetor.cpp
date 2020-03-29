@@ -126,24 +126,83 @@ int Vetor::Size()
 }
 void Vetor::Resize() {}
 
-void Vetor::BubbleSort()
+
+void Vetor::printArray(int arr[], int length)
+{
+	int i;
+	for (i = 0; i < length; i++)
+		cout << arr[i] << " ";
+	cout << endl;
+}
+
+void Vetor::BubbleSort(int arr[], int length)
+{
+	int i, j;
+	for (i = 0; i < length - 1; i++)
+
+		for (j = 0; j < length - i - 1; j++)
+			if (arr[j] > arr[j + 1])
+			{
+				int temp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
+			}
+}
+void Vetor::InsertionSort(int arr[], int length)
+{
+	int i, key, j;
+	for (i = 1; i < length; i++)
+	{
+		key = arr[i];
+		j = i - 1;
+
+		while (j >= 0 && arr[j] > key)
+		{
+			arr[j + 1] = arr[j];
+			j = j - 1;
+		}
+		arr[j + 1] = key;
+	}
+}
+void Vetor::SelectionSort(int arr[], int length)
+{
+	int i, j, min_idx;
+
+	for (i = 0; i < length - 1; i++)
+	{
+		min_idx = i;
+		for (j = i + 1; j < length; j++)
+			if (arr[j] < arr[min_idx])
+				min_idx = j;
+
+		int temp = arr[min_idx];
+		arr[min_idx] = arr[i];
+		arr[i] = temp;
+	}
+}
+void Vetor::QuickSort()
 {
 
 }
 void Vetor::MergeSort(){}
-void Vetor::SelectionSort(){}
-void Vetor::QuickSort(){}
-void Vetor::InsertionSort(){}
 
 void Vetor::Sort(TypeSort type)
 {
+	int varArr[100000];
+	for (int i = 0; i < length + 1; i++)
+	{
+		varArr[i] = arr[i];
+	}
 	switch (type)
 	{
 	case bubble:
+		BubbleSort(varArr, length);
 		break;
 	case insertion:
+		InsertionSort(varArr, length);
 		break;
 	case selection:
+		SelectionSort(varArr, length);
 		break;
 	case quick:
 		break;
@@ -152,4 +211,7 @@ void Vetor::Sort(TypeSort type)
 	default:
 		break;
 	}
+
+	printArray(varArr, length);
+
 }
