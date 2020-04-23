@@ -11,7 +11,7 @@ private:
 	void SelectionSort(int arr[], int length);
 	void QuickSort();
 	void MergeSort();
-	void printArray(int arr[], int length)
+	void printArray(int arr[], int length);
 public:
 	Vetor();
 	bool Add(int element);
