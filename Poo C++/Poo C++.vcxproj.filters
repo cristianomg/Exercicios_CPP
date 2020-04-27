@@ -21,9 +21,21 @@
     <ClCompile Include="Produto.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ProdutoFarmacia.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProdutoPadaria.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Produto.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProdutoFarmacia.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProdutoPadaria.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

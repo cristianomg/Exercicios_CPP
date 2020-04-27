@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include "Produto.h"
+#include "ProdutoFarmacia.h"
+#include "ProdutoPadaria.h"
 #include <string>
 #include<vector>
 using namespace std;
@@ -10,10 +12,10 @@ int main()
 {
     vector<Produto> listaDeProdutos;
     vector<Produto>::iterator it;
-    Produto p = Produto("Arroz", "Dalon", "21/10/2019", "25/06/2020");
-    Produto p1 = Produto("Arroz1", "Dalon", "21/10/2019", "25/06/2020");
-    Produto p2 = Produto("Arroz2", "Dalon", "21/10/2019", "25/06/2020");
-    Produto p3 = Produto("Arroz3", "Dalon", "21/10/2019", "25/06/2020");
+    Produto p = ProdutoFarmacia("Band-Aid", "Band-Aid", "21/10/2019", "25/06/2020", false);
+    Produto p1 = ProdutoFarmacia("ASpirina", "Aspirina", "21/10/2019", "25/06/2020", true);
+    Produto p2 = ProdutoPadaria("Arroz2", "Dalon", "21/10/2019", "25/06/2020", false);
+    Produto p3 = ProdutoPadaria("Arroz3", "Dalon", "21/10/2019", "25/06/2020", true);
     listaDeProdutos.push_back(p);
     listaDeProdutos.push_back(p1);
     listaDeProdutos.push_back(p2);

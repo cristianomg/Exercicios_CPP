@@ -149,9 +149,13 @@
   <ItemGroup>
     <ClCompile Include="Poo C++.cpp" />
     <ClCompile Include="Produto.cpp" />
+    <ClCompile Include="ProdutoFarmacia.cpp" />
+    <ClCompile Include="ProdutoPadaria.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Produto.h" />
+    <ClInclude Include="ProdutoFarmacia.h" />
+    <ClInclude Include="ProdutoPadaria.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
